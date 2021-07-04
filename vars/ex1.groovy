@@ -1,7 +1,7 @@
-def call(String name = "Slib-Text2") {
+def call(String name = "TextInsideSlib-Text2") {
     script {
         sh """
-            echo Test Text ${name}
+            echo ZCZC ${name}
         """
     }
 }
