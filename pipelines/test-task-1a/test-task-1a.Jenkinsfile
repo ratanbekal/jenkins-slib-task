@@ -6,7 +6,7 @@ node {
         echo "Print after the getAPI call"
         echo env.SECRET_NAME
         echo "---------- Checking if condition -------"
-        if ( env.SECRET_NAME =="SUCCESS" && env.SECRET_PASSWORD== "311113"){
+        if ( env.SECRET_NAME =="SUCCESS" ){
                env.SECRET_NAME=base64decode str:env.SECRET_NAME
                env.SECRET_PASSWORD=base64decode str:env.SECRET_PASSWORD
                println(env.SECRET_NAME)
