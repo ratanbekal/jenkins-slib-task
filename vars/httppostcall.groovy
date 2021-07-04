@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurper
 def call(Map params){
-  echo "Inside httppostcall func"
+  echo "************************************************  Inside httppostcall func*******"
   echo params.token
   echo params.url
   def response= httpRequest acceptType: 'APPLICATION_JSON', 
