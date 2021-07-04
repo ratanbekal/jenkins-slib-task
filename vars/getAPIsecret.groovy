@@ -5,7 +5,7 @@ def call(Map params){
   echo params.secret
   def response= httppostcall token:params.apitoken,requestBody:params.body,url:params.url,secretKey:params.secret
   println response
-  echo "Response from httppostcall" response
+  echo "Response from httppostcall" response.message response.id
   echo "call base64 func with value" response.message
   env.SECRET_NAME=base64decode str:response.message
   echo "call base64 func with value" response.id.toString() 
