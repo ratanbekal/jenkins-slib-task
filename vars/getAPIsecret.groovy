@@ -1,4 +1,4 @@
-odef call(Map params){
+def call(Map params){
   echo "***********************************   inside getAPISec Func  *****************"
   echo "Param-APIToken" 
   echo params.apitoken
