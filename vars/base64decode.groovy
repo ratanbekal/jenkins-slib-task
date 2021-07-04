@@ -1,5 +1,5 @@
 def call(Map params){
-  echo "inside base-decode funcc"
+  echo "*********************************  inside base-decode func *****************"
   echo params.str
   def s= params.str
   byte[] decoded =s.decodeBase64()
