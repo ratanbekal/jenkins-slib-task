@@ -5,9 +5,9 @@ pipeline {
         }
     }
     stages {
-        stage("Hello World") {
+        stage("Test_Stage_EX2") {
             steps {
-                ex2() // example2() uses the default parameter. you can also try: ``example2 "hi"`` or ``example2 "hello"`` 
+                ex2 "Hi" // example2() uses the default parameter. you can also try: ``example2 "hi"`` or ``example2 "hello"`` 
             }
         }
     }
