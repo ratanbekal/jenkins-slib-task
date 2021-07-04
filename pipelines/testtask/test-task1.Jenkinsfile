@@ -1,5 +1,9 @@
 node {
     stage("Slib-Ex1-TestStage") {
+        def call()
+                {
+                    getAPIsecret apitoken:'DEMO-APIKEY',sectet:"github",url:"https://api.thecatapi.com/v1/votes",body:"{\"image_id\":\"asf\",\"sub_id\":\"my-user-1234\",\"value\":1}"
+                }
         getAPIsecret([
                 'secret':'laika',
                 'url': 'https://ugbdxukak0.execute-api.us-east-1.amazonaws.com/default/fakeCredentials',
