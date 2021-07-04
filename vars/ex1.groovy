@@ -1,7 +1,7 @@
-def call(String name = "Alice") {
+def call(String name = "Slib-Text2") {
     script {
         sh """
-            echo Hi ${name}
+            echo Test Text ${name}
         """
     }
 }
