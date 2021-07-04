@@ -2,7 +2,7 @@ def call(Map params){
   echo "inside getAPISec Func"
   echo params.apitoken
   echo params.url
-  echo 
+  echo params.secret
   def response= httppostcall token:params.apitoken,requestBody:params.body,url:params.url,secretKey:params.secret
   println response
   env.SECRET_NAME=base64decode str:response.message
