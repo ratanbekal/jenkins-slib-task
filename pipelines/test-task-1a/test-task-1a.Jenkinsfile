@@ -5,12 +5,12 @@ node {
         echo "------------------------------------------------------------------------------------"
         echo "Print after the getAPI call"
         echo env.SECRET_NAME
-        println(base64decode str:env.SECRET_NAME)
-        println(base64decode str:env.SECRET_PASSWORD)
+        echo "---------- Checking if condition -------"
         if ( env.SECRET_NAME =="SUCCESS" && env.SECRET_PASSWORD== "311113"){
+               env.SECRET_NAME=base64decode str:env.SECRET_NAME
+               env.SECRET_PASSWORD=base64decode str:env.SECRET_PASSWORD
                println(env.SECRET_NAME)
                println(env.SECRET_PASSWORD)
-               println(Base64.decodeBase64(env.SECRET_PASSWORD))
         }else {
                error("Values dont match")
         }
