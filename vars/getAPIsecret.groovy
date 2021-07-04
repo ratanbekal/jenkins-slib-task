@@ -1,4 +1,4 @@
-def call(Map params){
+odef call(Map params){
   echo "***********************************   inside getAPISec Func  *****************"
   echo "Param-APIToken" 
   echo params.apitoken
@@ -20,6 +20,6 @@ def call(Map params){
   echo "Print Env Sec Name and Pass from with in getAPIsed func"
   echo env.SECRET_NAME
   echo env.SECRET_PASSWORD 
-  return env
+  return response
   
 }
