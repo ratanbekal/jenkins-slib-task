@@ -6,7 +6,7 @@ def call(Map params){
   echo params.secret
   def response= httpRequest acceptType: 'APPLICATION_JSON', 
                             contentType: 'APPLICATION_JSON',
-                            authentication: params.secret,
+                            //authentication: params.secret,
                             customHeaders: [[maskValue: true, name: 'x-api-key', value: params.token]], 
                             httpMode: 'POST',
                             ignoreSslErrors: true, 
