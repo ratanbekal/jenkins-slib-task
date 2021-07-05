@@ -10,7 +10,12 @@ def call(Map params){
   echo env.SECRET_NAME
   echo "Env Sec Pass" 
   echo env.SECRET_PASSWORD 
-  def response= httppostcall token:params.apitoken,requestBody:params.body,url:params.url,secretKey:params.secret
+  if (parms.ctype == "POST"){
+      def response= httppostcall token:params.apitoken,requestBody:params.body,url:params.url,secretKey:params.secret
+  }
+  if (parms.ctype == "GET"){
+      def response= httpgetcall token:params.apitoken,requestBody:params.body,url:params.url,secretKey:params.secret
+  }
   echo "----------- println response -------------"
   println response
   echo "call base64 func with value" 
