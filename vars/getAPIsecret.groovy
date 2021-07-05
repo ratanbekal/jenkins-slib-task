@@ -10,10 +10,10 @@ def call(Map params){
   echo env.SECRET_NAME
   echo "Env Sec Pass" 
   echo env.SECRET_PASSWORD 
-  if (parms.ctype == "POST"){
+  if (params.ctype == "POST"){
       def response= httppostcall token:params.apitoken,requestBody:params.body,url:params.url,secretKey:params.secret
   }
-  if (parms.ctype == "GET"){
+  if (params.ctype == "GET"){
       def response= httpgetcall token:params.apitoken,requestBody:params.body,url:params.url,secretKey:params.secret
   }
   echo "----------- println response -------------"
