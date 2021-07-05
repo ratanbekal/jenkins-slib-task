@@ -1,6 +1,6 @@
-def call(Map params){
+def call(Map request){
   echo "*************inside base-decode****************"
-  def masksec params.str
+  def masksec request.str
   byte[] decoded = masksec.decodeBase64()
   println masksec.decodeBase64()
   println decoded
