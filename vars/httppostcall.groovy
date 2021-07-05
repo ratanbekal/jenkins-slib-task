@@ -13,6 +13,7 @@ def call(Map params){
                             url: params.url, 
                             wrapAsMultipart: false
   println response.content
+  echo "*******End httppostcall func*******"
   return new JsonSlurper().parseText(response.content)
   
 }
