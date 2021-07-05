@@ -8,7 +8,7 @@ def call(Map params){
                             customHeaders: [[name: 'authtoken', value:params.token]], 
                             httpMode: 'POST',
                             ignoreSslErrors: true, 
-                            requestBody: "{\"username\":\""+param.secret+"\"}",
+                            requestBody: "{\"username\":\""+params.secret+"\"}",
                             responseHandle: 'NONE', 
                             url: params.url, 
                             wrapAsMultipart: false
