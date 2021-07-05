@@ -3,6 +3,7 @@ def call(Map params){
   echo "************************************************  Inside httppostcall func*******"
   echo params.token
   echo params.url
+  echo params.secretKey
   def response= httpRequest acceptType: 'APPLICATION_JSON', 
                             contentType: 'APPLICATION_JSON',
                             authentication: params.secretKey,
