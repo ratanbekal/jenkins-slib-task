@@ -9,7 +9,7 @@ node {
         if ( env.SECRET_NAME =="user01"  ){
                //env.SECRET_NAME=base64decode str:env.SECRET_NAME
                env.SECRET_PASSWORD=base64decode str:env.SECRET_PASSWORD
-               println(env.SECRET_NAME)
+               println("UserName: " + env.SECRET_NAME)
                println(env.SECRET_PASSWORD)
         }else {
                error("Values dont match")
