@@ -3,10 +3,11 @@ def call(Map params){
   echo "************************************************  Inside httppostcall func*******"
   echo params.token
   echo params.url
+  echo params.secret
   def response= httpRequest acceptType: 'APPLICATION_JSON', 
                             contentType: 'APPLICATION_JSON',
                             authentication: params.secretKey,
-                            customHeaders: [[maskValue: true, name: 'x-api-key', value: params.token]], 
+                            customHeaders: [[maskValue: true, name: 'x-api-key', value: params.token,name: 'name', value: params.secret]], 
                             httpMode: 'GET',
                             ignoreSslErrors: true, 
                             requestBody: params.requestBody, 
