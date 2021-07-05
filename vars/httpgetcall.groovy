@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurper
 def call(Map params){
-  echo "************************************************  Inside httppostcall func*******"
+  echo "************************************************  Inside http GET call func*******"
   echo params.token
   echo params.url
   echo params.secret
