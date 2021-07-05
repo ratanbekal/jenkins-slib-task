@@ -1,11 +1,10 @@
-def call(Map params){
+def call(Map request){
     echo "**inside getAPISec Func ********"
   
-    def response= httppostcall token:params.apitoken,requestBody:params.body,url:params.url,secret:params.secret
+    def response= httppostcall token:request.apitoken,url:request.url,secret:request.secret
     //env.SECRET_NAME= response.message
     //env.SECRET_PASSWORD= response.id.toString() 
-    echo "~~~~~~~~~ print response ~~~~~~~"
-    println(response.message)
+    echo "~~~~~~~~~ print response inside getAPISec ~~~~~~~"
     println(response.success)
     println(response.data)
   
