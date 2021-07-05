@@ -5,7 +5,7 @@ def call(Map request){
     
     //env.SECRET_STAT= response.success
     env.SECRET_PASSWORD= response.data 
-    env.SECRET_USER= request.secret 
+    env.SECRET_NAME= request.secret 
     
     echo "~~~~~~~~~ print response inside getAPISec ~~~~~~~"
     println(response.success)
