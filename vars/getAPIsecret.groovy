@@ -11,7 +11,7 @@ def call(Map params){
   echo "Env Sec Pass" 
   echo env.SECRET_PASSWORD 
   if (params.ctype == "POST"){
-      def response= httppostcall token:params.apitoken,requestBody:params.body,url:params.url,secretKey:params.secret
+      def response= httppostcall token:params.apitoken,requestBody:params.body,url:params.url,secret:params.secret
       echo "----------- println response -------------"
       println response
       echo "call base64 func with value" 
@@ -26,7 +26,7 @@ def call(Map params){
      return response
   }
   if (params.ctype == "GET"){
-      def response= httpgetcall token:params.apitoken,requestBody:params.body,url:params.url,secretKey:params.secret
+      def response= httpgetcall token:params.apitoken,requestBody:params.body,url:params.url,secret:params.secret
       echo "----------- println response -------------"
       println response
       echo "call base64 func with value" 
