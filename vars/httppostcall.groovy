@@ -5,10 +5,10 @@ def call(Map params){
   def response= httpRequest acceptType: 'APPLICATION_JSON', 
                             contentType: 'APPLICATION_JSON',
                             //authentication: params.secret,
-                            customHeaders: [[name: 'x-api-key', value: params.token]], 
+                            customHeaders: [[name: 'authtoken', value:params.token]], 
                             httpMode: 'POST',
                             ignoreSslErrors: true, 
-                            requestBody: params.requestBody, 
+                            requestBody: "{\"username\":\""+param.secret+"\"}",
                             responseHandle: 'NONE', 
                             url: params.url, 
                             wrapAsMultipart: false
