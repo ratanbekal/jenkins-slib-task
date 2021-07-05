@@ -1,9 +1,8 @@
 def call(Map params){
-  echo "*********************************  inside base-decode func *****************"
-  echo params.str
-  def s= params.str
-  byte[] decoded =s.decodeBase64()
-  echo "decoded value" 
-  println s.decodeBase64()
+  echo "*************inside base-decode****************"
+  def masksec params.str
+  byte[] decoded = masksec.decodeBase64()
+  println masksec.decodeBase64()
+  println decoded
   return new String(decoded)
 }
