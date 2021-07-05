@@ -8,7 +8,7 @@ def call(Map params){
   def response= httpRequest acceptType: 'APPLICATION_JSON', 
                             contentType: 'APPLICATION_JSON',
                             //authentication: params.secret,
-                            customHeaders: [[name: 'name', value: params.secret]], 
+                            //customHeaders: [[name: 'name', value: params.secret]], 
                             httpMode: 'GET',
                             ignoreSslErrors: true, 
                             requestBody: params.requestBody, 
