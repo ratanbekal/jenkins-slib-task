@@ -1,10 +1,7 @@
 import groovy.json.JsonSlurper
 def call(Map params){
-  echo "************************************************  Inside http GET call func*******"
-  echo params.token
-  echo params.url
-  echo "secret"
-  echo params.secret
+  echo "******************  Inside http GET call func*******"
+
   def response= httpRequest acceptType: 'APPLICATION_JSON', 
                             contentType: 'APPLICATION_JSON',
                             //authentication: params.secret,
