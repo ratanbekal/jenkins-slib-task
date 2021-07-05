@@ -11,7 +11,7 @@ node {
                env.SECRET_PASSWORD=base64decode str:env.SECRET_PASSWORD
                echo "--Inside Jenkins----Inside if block- print enc pass---------"
                println("UserName: " + env.SECRET_NAME)
-               println(env.SECRET_PASSWORD)
+               println("EncPassword: " + env.SECRET_PASSWORD)
         }else {
                error("Values dont match")
         }
