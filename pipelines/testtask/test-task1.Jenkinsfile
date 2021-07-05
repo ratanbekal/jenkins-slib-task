@@ -4,6 +4,7 @@ node {
      }   
      stage("Slib-Ex1-Test-2-Stage") {
         //getAPIsecret apitoken:'v6PxYYLe8rhKftISrfFM42vTNTIxeUt97JKgT1y5',ctype:"POST",secret:"niket",url:"https://ugbdxukak0.execute-api.us-east-1.amazonaws.com/default/fakeCredentials" 
+        echo "commented niket API"
      }
      stage("Slib-Ex1-Test-3-Stage") {
         getAPIsecret apitoken:'v6PxYYLe8rhKftISrfFM42vTNTIxeUt97JKgT1y5',ctype:"GET",secret:"ratan",url:"https://api.genderize.io" 
