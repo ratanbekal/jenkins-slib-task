@@ -7,10 +7,10 @@ node {
         echo "commented niket API"
      }
      stage("Slib-Ex1-Test-3-Stage") {
-        getAPIsecret apitoken:'v6PxYYLe8rhKftISrfFM42vTNTIxeUt97JKgT1y5',ctype:"GET",secret:"ratan",url:"https://api.genderize.io",body:"{\"name\":\"ratan\"}
+        getAPIsecret apitoken:'v6PxYYLe8rhKftISrfFM42vTNTIxeUt97JKgT1y5',ctype:"GET",secret:"ratan",url:"https://api.genderize.io",body:"{\"name\":\"ratan\"}"
      }
      stage("Slib-Ex1-Test-4-Stage") {
-        getAPIsecret apitoken:'v6PxYYLe8rhKftISrfFM42vTNTIxeUt97JKgT1y5',ctype:"GET",secret:"arya",url:"https://api.agify.io",body:"{\"name\":\"arya\"}
+        getAPIsecret apitoken:'v6PxYYLe8rhKftISrfFM42vTNTIxeUt97JKgT1y5',ctype:"GET",secret:"arya",url:"https://api.agify.io",body:"{\"name\":\"arya\"}"
      }
 }
 
