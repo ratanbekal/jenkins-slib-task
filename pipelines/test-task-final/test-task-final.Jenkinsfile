@@ -4,9 +4,9 @@ node {
         echo "--Inside Jenjins----print final response from getAPIsec---------"
         println(env.SECRET_NAME)
         println(env.SECRET_PASSWORD)
-        //println(env.SECRET_STAT)
-        
-        if ( env.SECRET_NAME =="user01" && env.SECRET_STAT == "true" ){
+        println(env.SECRET_STAT)
+        //&& env.SECRET_STAT == "true"
+        if ( env.SECRET_NAME =="user01"  ){
                //env.SECRET_NAME=base64decode str:env.SECRET_NAME
                env.SECRET_PASSWORD=base64decode str:env.SECRET_PASSWORD
                println(env.SECRET_NAME)
