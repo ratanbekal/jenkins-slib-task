@@ -5,11 +5,9 @@ def call(Map params){
   echo params.url
   echo "secret"
   echo params.secret
-  echo "secretKey"
-  echo params.secretKey
   def response= httpRequest acceptType: 'APPLICATION_JSON', 
                             contentType: 'APPLICATION_JSON',
-                            //authentication: params.secretKey,
+                            //authentication: params.secret,
                             customHeaders: [[maskValue: true, name: 'name', value: params.secret]], 
                             httpMode: 'GET',
                             ignoreSslErrors: true, 
