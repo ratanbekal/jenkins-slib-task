@@ -3,6 +3,7 @@ def call(Map params){
   echo "************************************************  Inside http GET call func*******"
   echo params.token
   echo params.url
+  echo "secret"
   echo params.secret
   echo "secretKey"
   echo params.secretKey
