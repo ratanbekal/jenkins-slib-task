@@ -5,9 +5,10 @@ node {
         
         //&& env.SECRET_STAT == "true"
         
-        if ( env.SECRET_NAME =="user01"  ){
+        if ( env.SECRET_NAME =="user01" && env.SECRET_STAT == "true" ){
               //env.SECRET_NAME=base64decode str:env.SECRET_NAME
               env.SECRET_PASSWORD=base64decode str:env.SECRET_PASSWORD
+              println("SecChk_Stat : + env.SECRET_STAT)
               println("UserName: " + env.SECRET_NAME)
               println("EncPassword: " + env.SECRET_PASSWORD)
          }else {
